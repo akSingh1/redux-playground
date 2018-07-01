@@ -1,0 +1,26 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .btn-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.btn {
+  font-size: 1.1rem;
+  width: 6rem;
+  height: 2rem;
+  border: 0px;
+}
+.decrement {
+  background: #d9534f;
+}
+.increment {
+  background: #5cb85c;
+}
