@@ -12,4 +12,7 @@ It has two([redux](https://github.com/kuldeepkeshwar/redux-playground/tree/maste
 
 *** `react-redux` comes with `Provider` component & `connect` HOF
 
+*** `redux-thunk`
+
+
 ***happy hacking !!***

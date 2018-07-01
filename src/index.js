@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from './redux';
 import { Provider } from './react-redux';
+import thunk from './redux-thunk';
 
 import reducer from './reducer';
 import loggerMiddleware from './logger';
@@ -13,7 +14,7 @@ import './styles.css';
 const store = createStore(
   [reducer],
   undefined,
-  applyMiddleware([loggerMiddleware, errorLoggerMiddleware])
+  applyMiddleware([loggerMiddleware, errorLoggerMiddleware, thunk])
 );
 
 class App extends React.Component {
