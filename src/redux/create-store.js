@@ -1,4 +1,4 @@
-function createStore(reducers, initailState, enhancer) {
+export default (reducers, initailState, enhancer) => {
   let state = initailState;
   let listeners = [];
   const store = {
@@ -9,17 +9,11 @@ function createStore(reducers, initailState, enhancer) {
         return reducedState;
       }, state);
     },
-    getState: () => {
-      return state;
-    },
+    getState: () => state,
     subscribe: listener => {
       listeners.push(listener);
-      return () => {
-        listeners = listeners.filter(l => l !== listener);
-      };
+      return () => (listeners = listeners.filter(l => l !== listener));
     }
   };
   return enhancer ? enhancer(store) : store;
-}
-
-export default createStore;
+};
