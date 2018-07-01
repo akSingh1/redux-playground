@@ -16,7 +16,7 @@ export class Provider extends React.Component {
     };
   }
   unsubscribe = null;
-  componentDidMount() {
+  componentWillMount() {
     const { subscribe } = this.props.store;
     this.unsubscribe = subscribe(state => {
       this.setState({ store: { state, dispatch: this.props.store.dispatch } });

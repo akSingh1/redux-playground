@@ -5,7 +5,7 @@ import { connect } from './react-redux';
 const Counter = props => {
   return (
     <div className="container">
-      <div>Counters : {props.counter}</div>
+      <div>Counter : {props.counter}</div>
       <div className="btn-wrapper">
         <button className="btn increment" onClick={() => props.increment(1)}>
           +
