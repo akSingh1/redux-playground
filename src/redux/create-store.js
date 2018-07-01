@@ -1,4 +1,4 @@
-function createStore(reducers, initailState, applyMiddlewareFn) {
+function createStore(reducers, initailState, enhancer) {
   let state = initailState;
   let listeners = [];
   const store = {
@@ -19,7 +19,7 @@ function createStore(reducers, initailState, applyMiddlewareFn) {
       };
     }
   };
-  return applyMiddlewareFn(store);
+  return enhancer ? enhancer(store) : store;
 }
 
 export default createStore;

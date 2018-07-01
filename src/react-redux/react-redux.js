@@ -47,27 +47,3 @@ export const connect = (
     }}
   </ReduxConsumer>
 );
-
-/**
- * connect in more simpler format
- */
-// export function connect(propsMapper, actionsMapper) {
-//   return BaseComponent => {
-//     class WrapperComponent extends React.Component {
-//       render() {
-//         const baseProps = this.props;
-//         return (
-//           <Consumer>
-//             {({ state, dispatch }) => {
-//               const props = propsMapper(state, baseProps);
-//               const actions = actionCreator(dispatch)(actionsMapper);
-//               return <BaseComponent {...props} {...actions} />;
-//             }}
-//           </Consumer>
-//         );
-//       }
-//     }
-//     WrapperComponent.displayName = `connect${BaseComponent.name}`
-//     return WrapperComponent;
-//   };
-// }
