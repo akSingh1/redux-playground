@@ -5,9 +5,9 @@ export default (reducers, initailState, enhancer) => {
     dispatch: action => {
       state = reducers.reduce((_state, reducer) => {
         const reducedState = reducer(_state, action);
-        listeners.forEach(listener => listener(reducedState));
         return reducedState;
       }, state);
+      listeners.forEach(listener => listener(state));
     },
     getState: () => state,
     subscribe: listener => {
